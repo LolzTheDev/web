@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux</title>
+
+    <script src="https://unpkg.com/dreamland"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./src/index.css">
+
+    <style type="text/tailwindcss">
+        h1 {
+            @apply text-4xl font-bold;
+        }
+
+        h2 {
+            @apply text-3xl font-semibold;
+        }
+
+        h3 {
+            @apply text-2xl font-medium;
+        }
+
+        .card {
+            @apply bg-zinc-950 rounded-lg border-2 duration-300 hover:border-zinc-700 border-zinc-800
+        }
+
+        button {
+            @apply card p-2 font-semibold min-w-48 w-48;
+        }
+
+        a {
+            @apply text-zinc-300 font-bold hover:border-b-2 border-zinc-300
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-950 text-zinc-200 font-dm-sans flex h-screen justify-center">
+    <div id="root" class="p-8 mb-4"></div>
+
+    <script src="./src/app.js"></script>
+
+    <script>
+        window.addEventListener("load", () => {
+            document.getElementById("root").appendChild(h(App))
+        })
+    </script>
+</body>
+</html>
